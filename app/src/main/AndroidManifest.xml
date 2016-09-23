@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devs.twilioclientmine">
+
+    <!-- needed for monitoring network availability -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!-- needed for processing on the network -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- needed to enable/disable the speakerphone -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <!-- needed to receive audio from microphone during a call -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DialogCallInOut"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateVisible|adjustResize|stateHidden" />
+
+        <service android:name="com.twilio.client.TwilioClientService" android:exported="false"
+            android:stopWithTask="false"/>
+
+        <service android:name=".IncomingService"/>
+
+    </application>
+
+</manifest>

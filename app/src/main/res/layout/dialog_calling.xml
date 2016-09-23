@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="40dp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:visibility="visible"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_calling"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:background="@drawable/circle_blue"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@android:drawable/sym_call_outgoing" />
+
+    <Chronometer
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer"
+        android:textSize="20sp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_calling"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calling..."
+        android:textSize="15sp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User name"
+        android:textSize="20sp"
+        android:textColor="@android:color/black" />
+
+   <!-- <Button
+        android:visibility="visible"
+        android:layout_margin="4dp"
+        android:id="@+id/btn_end_call"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="right"
+        android:background="#f14646"
+        android:text="End Call" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:id="@+id/iv_speaker"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/circle_blue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_speaker_off_black_24dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_end_call"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:src="@android:drawable/ic_menu_call"
+            app:backgroundTint="#f14646"/>
+
+        <ImageView
+            android:id="@+id/iv_mic"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/circle_blue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_mic_green_24px"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
